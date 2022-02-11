@@ -4,6 +4,9 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import Grid from '@mui/material/Grid';
+import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
 
 const socialItems = [
   {
@@ -28,13 +31,19 @@ const socialItems = [
   },
 ];
 
-const Social = () => {
+const Social = ({ direction }) => {
   return (
-    <div>
+    <Grid container direction={direction || 'row'} spacing={2}>
       {socialItems.map((item) => (
-        <item.icon />
+        <Grid item>
+          <IconButton>
+            <Link href={item.url}>
+              <item.icon />
+            </Link>
+          </IconButton>
+        </Grid>
       ))}
-    </div>
+    </Grid>
   );
 };
 
