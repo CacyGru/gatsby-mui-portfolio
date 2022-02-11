@@ -23,15 +23,16 @@ const HeroSection = () => {
         position: 'absolute',
         backgroundSize: 'cover',
         backgroundPosition: 'center center',
-        zIndex: '-1',
+        zIndex: '-3',
         '&:before': {
           position: 'absolute',
           width: '100%',
           height: '100%',
           content: '""',
           display: 'block',
-          background: 'rgba(0,0,0,0.8)',
+          background: 'rgba(0,0,0,0.9)',
           opacity: '0.6',
+          zIndex: '-2',
         },
       }}
     >
